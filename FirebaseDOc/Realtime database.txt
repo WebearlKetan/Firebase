@@ -1,0 +1,43 @@
+Writing Data:
+
+ref().set(data): Set data at a specified reference.
+Reading Data:
+
+ref().once('value'): Read data once from a reference.
+ref().on('value', callback): Listen for real-time data changes.
+Updating Data:
+
+ref().update(updates): Update specific fields in the data.
+Deleting Data:
+
+ref().remove(): Delete data at the reference.
+These methods allow you to interact with the Realtime Database in Firebase to read, write, update, and delete data in a straightforward manner.
+
+
+
+
+
+Pushing Data:
+
+ref().push(data): Add data as a new child with a unique key.
+Querying Data:
+
+ref().orderByChild('child').equalTo('value'): Query data based on specific criteria.
+ref().limitToFirst(5): Limit the number of results returned.
+ref().startAt(value): Start querying from a specific value.
+ref().endAt(value): End querying at a specific value.
+Transactions:
+
+ref().transaction(updateFunction): Perform an atomic transaction to ensure data consistency.
+Child References:
+
+ref('child'): Get a reference to a child node for more targeted operations.
+Listening for Child Events:
+
+ref().on('child_added', callback): Listen for when a new child is added.
+ref().on('child_changed', callback): Listen for when a child's data changes.
+ref().on('child_removed', callback): Listen for when a child is removed.
+Disconnect Handling:
+
+ref().onDisconnect().set(data): Set data to be written when the connection is lost.
+ref().onDisconnect().remove(): Remove data on disconnect.
